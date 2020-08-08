@@ -210,7 +210,10 @@
 			var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 			updateRotationDates();
 			counter = getCurrentRotation();
-			document.getElementById("nextRotation").innerHTML = "NEXT ROTATION: ".bold() + all_rots[counter+1].print();
+			if(counter == 7)
+				document.getElementById("nextRotation").innerHTML = "NEXT ROTATION: ".bold() + all_rots[0].print();
+			else 
+				document.getElementById("nextRotation").innerHTML = "NEXT ROTATION: ".bold() + all_rots[counter+1].print();
 			<!--document.getElementById("currentRotation").innerHTML = "Current rotation is highlighted in green on the table;
 			document.getElementById("specificCorruption").innerHTML = " ";
 			<!-- document.getElementById("specificCorruption").innerHTML = all_rots[findNextAvailability("Versatile 2")].lastAvailable + "\n" + all_rots[findNextAvailability("Versatile 2")].nextAvailable;
